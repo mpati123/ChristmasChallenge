@@ -1,3 +1,5 @@
+package Day1;
+
 public class Places {
     private double x;
     private double y;

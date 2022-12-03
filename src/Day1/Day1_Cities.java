@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+package Day1;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.sqrt;
