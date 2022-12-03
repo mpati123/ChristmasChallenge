@@ -16,28 +16,34 @@ public class Day3_ChristmasTree {
         int height = 15;
 
         for (int i = 1; i <= height; i++) {
-            drawSpace(i, height);
-            drawTwig(i, '/');
-            System.out.print("|");
-            drawTwig(i, '\\');
-            System.out.println("");
+            drawRow(i, height);
         }
     }
 
-    public static int countDistanceFromBeggining(int i, int height) {
+    private static void drawRow(int i, int height) {
+        drawSpace(i, height);
+        drawTwig(i, '/');
+        System.out.print("|");
+        drawTwig(i, '\\');
+        System.out.println("");
+    }
+
+    private static int countDistanceFromBeggining(int i, int height) {
         return height - i;
     }
 
-    public static void drawSpace(int i, int height) {
+    private static void drawSpace(int i, int height) {
         for (int j = 0; j < countDistanceFromBeggining(i, height); j++) {
             System.out.print(" ");
         }
     }
 
-    public static void drawTwig(int i, char twig) {
+    private static void drawTwig(int i, char twig) {
         for (int j = 0; j < i; j++) {
             System.out.print(twig);
         }
     }
+
+
 
 }
